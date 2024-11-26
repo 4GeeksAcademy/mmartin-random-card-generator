@@ -2,10 +2,27 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let randomPick = function(lower, upper) {
+  return Math.floor(Math.random() * (upper - lower) + lower);
+};
+let suits = [{ heart: "♥" }, { club: "♠" }, { spade: "♣" }, { diamond: "♦" }];
+let ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
+
+let renderCard = function(suit, rank) {
+  let suitKey = Object.keys(suit)[0];
+  let symbols = document.querySelectorAll(".symbol");
+  symbols.forEach(element => {
+    let currentSym = element.classList[1];
+    element.classList.remove(currentSym);
+    element.classList.add(suitKey);
+    element.textContent = suits[suitKey];
+  });
+  let currentRank = document.querySelector(".rank");
+  currentRank.textContent = rank;
+};
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let suit = suits[randomPick(0, 3)];
+  let rank = ranks[randomPick(0, 13)];
+  renderCard(suit, rank);
 };

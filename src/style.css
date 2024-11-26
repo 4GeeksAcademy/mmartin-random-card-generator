@@ -1,1 +1,56 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: green;
+}
+
+.card {
+  background-color: white;
+  height: 80vh;
+  width: 60vh;
+  border-radius: 20px;
+  display: flex;
+  margin: auto;
+  margin-top: 10vh;
+  position: relative;
+}
+
+.upper {
+  font-size: 15vh;
+  display: flex;
+  float: left;
+  margin: auto;
+  margin-left: 2vh;
+}
+
+.center {
+  font-weight: bold;
+  font-size: 20vh;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.lower {
+  font-size: 15vh;
+  display: flex;
+  float: right;
+  margin: auto;
+  margin-right: 2vh;
+}
+
+.heart {
+  color: red;
+}
+
+.diamond {
+  color: red;
+}
+
+.spade {
+  color: black;
+}
+
+.club {
+  color: black;
+}
