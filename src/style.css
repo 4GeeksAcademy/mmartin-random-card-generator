@@ -2,6 +2,7 @@
 
 body {
   background-color: green;
+  display: flex;
 }
 
 .card {
@@ -33,12 +34,90 @@ body {
 
 .lower {
   font-size: 15vh;
-  display: flex;
   float: right;
   margin: auto;
   margin-right: 2vh;
 }
 
+.buttonsDiv {
+  float: center;
+  width: 48vh;
+  margin-left: 40vh;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
+#generateCard {
+  border-radius: 10px;
+  height: 15vh;
+  width: 40vh;
+  margin: auto;
+  font-size: 5vh;
+  font-weight: bold;
+}
+.delayedCardButtons {
+  margin: auto;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+}
+#startGen {
+  height: 10vh;
+  width: 20vh;
+  margin: auto;
+  background-color: rgb(68, 68, 230);
+  color: white;
+  font-weight: bold;
+  font-size: 4vh;
+  border-radius: 10px;
+}
+#stopGen {
+  height: 10vh;
+  width: 20vh;
+  margin: auto;
+  background-color: rgb(216, 45, 45);
+  color: white;
+  font-weight: bold;
+  font-size: 4vh;
+  border-radius: 10px;
+}
+
+#counter {
+  font-size: 10vh;
+  font-weight: bold;
+  display: block;
+  margin-top: 3vh;
+  text-align: center;
+  background-color: azure;
+}
+
+.sizing {
+  display: block;
+  position: relative;
+}
+
+.sizing > div {
+  margin-top: 2vh;
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+}
+label {
+  font-weight: bold;
+  color: white;
+  margin: 2px;
+}
+
+input {
+  margin: 2px;
+}
+#resizeCard {
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 8px;
+  margin: auto;
+  margin-top: 1vh;
+}
 .heart {
   color: red;
 }
@@ -53,4 +132,9 @@ body {
 
 .club {
   color: black;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
 }
