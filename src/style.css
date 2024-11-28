@@ -13,6 +13,7 @@ body {
   display: flex;
   margin: auto;
   margin-top: 10vh;
+  margin-bottom: 10vh;
   position: relative;
 }
 
@@ -117,21 +118,6 @@ input {
   padding: 8px;
   margin: auto;
   margin-top: 1vh;
-}
-.heart {
-  color: red;
-}
-
-.diamond {
-  color: red;
-}
-
-.spade {
-  color: black;
-}
-
-.club {
-  color: black;
 }
 
 .wrapper {

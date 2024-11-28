@@ -5,7 +5,12 @@ import "./style.css";
 let randomPick = function (lower, upper) {
   return Math.floor(Math.random() * (upper - lower) + lower);
 };
-let suits = [{ heart: "♥" }, { club: "♠" }, { spade: "♣" }, { diamond: "♦" }];
+let suits = [
+  { heart: ["♥", "red"] },
+  { club: ["♠", "black"] },
+  { spade: ["♣", "black"] },
+  { diamond: ["♦", "red"] }
+];
 let ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
 
 let renderCard = function () {
@@ -16,15 +21,11 @@ let renderCard = function () {
   let currentRank = document.querySelector(".rank");
 
   symbols.forEach(element => {
-    let currentSym = element.classList[2];
-    element.classList.remove(currentSym);
-    element.classList.add(suitKey);
-    element.innerHTML = suit[suitKey];
+    element.style.color = suit[suitKey][1];
+    element.innerHTML = suit[suitKey][0];
   });
 
-  let rankColorSuit = currentRank.classList[1];
-  currentRank.classList.remove(rankColorSuit);
-  currentRank.classList.add(suitKey);
+  currentRank.style.color = suit[suitKey][1];
   currentRank.innerHTML = rank;
 };
 
@@ -33,9 +34,7 @@ window.onload = function () {
 };
 
 let randomGenButton = document.querySelector("#generateCard");
-randomGenButton.addEventListener("click", function () {
-  renderCard();
-});
+randomGenButton.addEventListener("click", renderCard);
 
 let myCounter = document.querySelector("#counter");
 let setTime = 10;
@@ -70,6 +69,7 @@ let inputWidth = document.querySelector("#widthInput");
 let inputHeight = document.querySelector("#heightInput");
 let cardSize = document.querySelector(".card");
 let resizeButton = document.querySelector("#resizeCard");
+
 let validation = function (input) {
   if (isNaN(input)) {
     return false;
